@@ -1,50 +1,162 @@
 
--- ================================
--- Hospital Database - Sample Data
--- ================================
+-- ==================================================
+-- Hospital Database - FULL FK-SAFE HUMAN DATASET
+-- >=50 rows per human table
+-- NO calculations, NO MOD, NO assumptions
+-- ==================================================
 
-INSERT INTO departments (department_name, floor_number) VALUES ('Cardiology', 2);
-INSERT INTO departments (department_name, floor_number) VALUES ('Emergency', 1);
-INSERT INTO departments (department_name, floor_number) VALUES ('Neurology', 3);
+-- PATIENTS
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20000', 'John Muller', DATE '1980-01-15', 'M', '621100000', 'john.muller@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20001', 'Anna Weber', DATE '1982-02-18', 'F', '621100001', 'anna.weber@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20002', 'Paul Schneider', DATE '1979-03-22', 'M', '621100002', 'paul.schneider@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20003', 'Claire Dupont', DATE '1990-04-10', 'F', '621100003', 'claire.dupont@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20004', 'Tom Becker', DATE '1975-05-05', 'M', '621100004', 'tom.becker@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20005', 'Laura Hoffmann', DATE '1988-06-14', 'F', '621100005', 'laura.hoffmann@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20006', 'Marc Klein', DATE '1981-07-09', 'M', '621100006', 'marc.klein@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20007', 'Sophie Laurent', DATE '1992-08-30', 'F', '621100007', 'sophie.laurent@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20008', 'Daniel Fischer', DATE '1977-09-12', 'M', '621100008', 'daniel.fischer@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20009', 'Isabelle Martin', DATE '1985-10-01', 'F', '621100009', 'isabelle.martin@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20010', 'John Muller', DATE '1980-01-15', 'M', '621100010', 'john.muller@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20011', 'Anna Weber', DATE '1982-02-18', 'F', '621100011', 'anna.weber@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20012', 'Paul Schneider', DATE '1979-03-22', 'M', '621100012', 'paul.schneider@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20013', 'Claire Dupont', DATE '1990-04-10', 'F', '621100013', 'claire.dupont@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20014', 'Tom Becker', DATE '1975-05-05', 'M', '621100014', 'tom.becker@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20015', 'Laura Hoffmann', DATE '1988-06-14', 'F', '621100015', 'laura.hoffmann@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20016', 'Marc Klein', DATE '1981-07-09', 'M', '621100016', 'marc.klein@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20017', 'Sophie Laurent', DATE '1992-08-30', 'F', '621100017', 'sophie.laurent@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20018', 'Daniel Fischer', DATE '1977-09-12', 'M', '621100018', 'daniel.fischer@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20019', 'Isabelle Martin', DATE '1985-10-01', 'F', '621100019', 'isabelle.martin@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20020', 'John Muller', DATE '1980-01-15', 'M', '621100020', 'john.muller@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20021', 'Anna Weber', DATE '1982-02-18', 'F', '621100021', 'anna.weber@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20022', 'Paul Schneider', DATE '1979-03-22', 'M', '621100022', 'paul.schneider@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20023', 'Claire Dupont', DATE '1990-04-10', 'F', '621100023', 'claire.dupont@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20024', 'Tom Becker', DATE '1975-05-05', 'M', '621100024', 'tom.becker@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20025', 'Laura Hoffmann', DATE '1988-06-14', 'F', '621100025', 'laura.hoffmann@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20026', 'Marc Klein', DATE '1981-07-09', 'M', '621100026', 'marc.klein@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20027', 'Sophie Laurent', DATE '1992-08-30', 'F', '621100027', 'sophie.laurent@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20028', 'Daniel Fischer', DATE '1977-09-12', 'M', '621100028', 'daniel.fischer@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20029', 'Isabelle Martin', DATE '1985-10-01', 'F', '621100029', 'isabelle.martin@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20030', 'John Muller', DATE '1980-01-15', 'M', '621100030', 'john.muller@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20031', 'Anna Weber', DATE '1982-02-18', 'F', '621100031', 'anna.weber@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20032', 'Paul Schneider', DATE '1979-03-22', 'M', '621100032', 'paul.schneider@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20033', 'Claire Dupont', DATE '1990-04-10', 'F', '621100033', 'claire.dupont@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20034', 'Tom Becker', DATE '1975-05-05', 'M', '621100034', 'tom.becker@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20035', 'Laura Hoffmann', DATE '1988-06-14', 'F', '621100035', 'laura.hoffmann@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20036', 'Marc Klein', DATE '1981-07-09', 'M', '621100036', 'marc.klein@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20037', 'Sophie Laurent', DATE '1992-08-30', 'F', '621100037', 'sophie.laurent@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20038', 'Daniel Fischer', DATE '1977-09-12', 'M', '621100038', 'daniel.fischer@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20039', 'Isabelle Martin', DATE '1985-10-01', 'F', '621100039', 'isabelle.martin@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20040', 'John Muller', DATE '1980-01-15', 'M', '621100040', 'john.muller@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20041', 'Anna Weber', DATE '1982-02-18', 'F', '621100041', 'anna.weber@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20042', 'Paul Schneider', DATE '1979-03-22', 'M', '621100042', 'paul.schneider@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20043', 'Claire Dupont', DATE '1990-04-10', 'F', '621100043', 'claire.dupont@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20044', 'Tom Becker', DATE '1975-05-05', 'M', '621100044', 'tom.becker@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20045', 'Laura Hoffmann', DATE '1988-06-14', 'F', '621100045', 'laura.hoffmann@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20046', 'Marc Klein', DATE '1981-07-09', 'M', '621100046', 'marc.klein@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20047', 'Sophie Laurent', DATE '1992-08-30', 'F', '621100047', 'sophie.laurent@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20048', 'Daniel Fischer', DATE '1977-09-12', 'M', '621100048', 'daniel.fischer@mail.com');
+INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20049', 'Isabelle Martin', DATE '1985-10-01', 'F', '621100049', 'isabelle.martin@mail.com');
 
-INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email)
-VALUES ('LU12345', 'John Muller', DATE '1985-04-12', 'M', '621111111', 'john.muller@mail.com');
+-- DOCTORS
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Marc Klein', 'Cardiology', 'LIC-101', (SELECT department_id FROM departments WHERE department_name='Cardiology'), DATE '2010-01-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Sophie Laurent', 'Neurology', 'LIC-102', (SELECT department_id FROM departments WHERE department_name='Neurology'), DATE '2011-02-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Hans Muller', 'Emergency Medicine', 'LIC-103', (SELECT department_id FROM departments WHERE department_name='Emergency'), DATE '2009-03-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Elise Moreau', 'Pediatrics', 'LIC-104', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), DATE '2015-04-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Patrick Weber', 'Orthopedics', 'LIC-105', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), DATE '2008-05-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Marc Klein', 'Cardiology', 'LIC-101', (SELECT department_id FROM departments WHERE department_name='Cardiology'), DATE '2010-01-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Sophie Laurent', 'Neurology', 'LIC-102', (SELECT department_id FROM departments WHERE department_name='Neurology'), DATE '2011-02-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Hans Muller', 'Emergency Medicine', 'LIC-103', (SELECT department_id FROM departments WHERE department_name='Emergency'), DATE '2009-03-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Elise Moreau', 'Pediatrics', 'LIC-104', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), DATE '2015-04-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Patrick Weber', 'Orthopedics', 'LIC-105', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), DATE '2008-05-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Marc Klein', 'Cardiology', 'LIC-101', (SELECT department_id FROM departments WHERE department_name='Cardiology'), DATE '2010-01-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Sophie Laurent', 'Neurology', 'LIC-102', (SELECT department_id FROM departments WHERE department_name='Neurology'), DATE '2011-02-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Hans Muller', 'Emergency Medicine', 'LIC-103', (SELECT department_id FROM departments WHERE department_name='Emergency'), DATE '2009-03-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Elise Moreau', 'Pediatrics', 'LIC-104', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), DATE '2015-04-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Patrick Weber', 'Orthopedics', 'LIC-105', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), DATE '2008-05-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Marc Klein', 'Cardiology', 'LIC-101', (SELECT department_id FROM departments WHERE department_name='Cardiology'), DATE '2010-01-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Sophie Laurent', 'Neurology', 'LIC-102', (SELECT department_id FROM departments WHERE department_name='Neurology'), DATE '2011-02-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Hans Muller', 'Emergency Medicine', 'LIC-103', (SELECT department_id FROM departments WHERE department_name='Emergency'), DATE '2009-03-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Elise Moreau', 'Pediatrics', 'LIC-104', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), DATE '2015-04-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Patrick Weber', 'Orthopedics', 'LIC-105', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), DATE '2008-05-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Marc Klein', 'Cardiology', 'LIC-101', (SELECT department_id FROM departments WHERE department_name='Cardiology'), DATE '2010-01-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Sophie Laurent', 'Neurology', 'LIC-102', (SELECT department_id FROM departments WHERE department_name='Neurology'), DATE '2011-02-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Hans Muller', 'Emergency Medicine', 'LIC-103', (SELECT department_id FROM departments WHERE department_name='Emergency'), DATE '2009-03-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Elise Moreau', 'Pediatrics', 'LIC-104', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), DATE '2015-04-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Patrick Weber', 'Orthopedics', 'LIC-105', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), DATE '2008-05-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Marc Klein', 'Cardiology', 'LIC-101', (SELECT department_id FROM departments WHERE department_name='Cardiology'), DATE '2010-01-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Sophie Laurent', 'Neurology', 'LIC-102', (SELECT department_id FROM departments WHERE department_name='Neurology'), DATE '2011-02-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Hans Muller', 'Emergency Medicine', 'LIC-103', (SELECT department_id FROM departments WHERE department_name='Emergency'), DATE '2009-03-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Elise Moreau', 'Pediatrics', 'LIC-104', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), DATE '2015-04-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Patrick Weber', 'Orthopedics', 'LIC-105', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), DATE '2008-05-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Marc Klein', 'Cardiology', 'LIC-101', (SELECT department_id FROM departments WHERE department_name='Cardiology'), DATE '2010-01-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Sophie Laurent', 'Neurology', 'LIC-102', (SELECT department_id FROM departments WHERE department_name='Neurology'), DATE '2011-02-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Hans Muller', 'Emergency Medicine', 'LIC-103', (SELECT department_id FROM departments WHERE department_name='Emergency'), DATE '2009-03-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Elise Moreau', 'Pediatrics', 'LIC-104', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), DATE '2015-04-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Patrick Weber', 'Orthopedics', 'LIC-105', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), DATE '2008-05-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Marc Klein', 'Cardiology', 'LIC-101', (SELECT department_id FROM departments WHERE department_name='Cardiology'), DATE '2010-01-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Sophie Laurent', 'Neurology', 'LIC-102', (SELECT department_id FROM departments WHERE department_name='Neurology'), DATE '2011-02-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Hans Muller', 'Emergency Medicine', 'LIC-103', (SELECT department_id FROM departments WHERE department_name='Emergency'), DATE '2009-03-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Elise Moreau', 'Pediatrics', 'LIC-104', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), DATE '2015-04-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Patrick Weber', 'Orthopedics', 'LIC-105', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), DATE '2008-05-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Marc Klein', 'Cardiology', 'LIC-101', (SELECT department_id FROM departments WHERE department_name='Cardiology'), DATE '2010-01-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Sophie Laurent', 'Neurology', 'LIC-102', (SELECT department_id FROM departments WHERE department_name='Neurology'), DATE '2011-02-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Hans Muller', 'Emergency Medicine', 'LIC-103', (SELECT department_id FROM departments WHERE department_name='Emergency'), DATE '2009-03-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Elise Moreau', 'Pediatrics', 'LIC-104', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), DATE '2015-04-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Patrick Weber', 'Orthopedics', 'LIC-105', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), DATE '2008-05-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Marc Klein', 'Cardiology', 'LIC-101', (SELECT department_id FROM departments WHERE department_name='Cardiology'), DATE '2010-01-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Sophie Laurent', 'Neurology', 'LIC-102', (SELECT department_id FROM departments WHERE department_name='Neurology'), DATE '2011-02-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Hans Muller', 'Emergency Medicine', 'LIC-103', (SELECT department_id FROM departments WHERE department_name='Emergency'), DATE '2009-03-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Elise Moreau', 'Pediatrics', 'LIC-104', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), DATE '2015-04-01');
+INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date) VALUES ('Dr. Patrick Weber', 'Orthopedics', 'LIC-105', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), DATE '2008-05-01');
 
-INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email)
-VALUES ('LU67890', 'Anna Weber', DATE '1990-09-23', 'F', '621222222', 'anna.weber@mail.com');
-
-INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date)
-VALUES ('Dr. Marc Klein', 'Cardiology', 'LIC-001', 1, DATE '2015-06-01');
-
-INSERT INTO doctors (full_name, specialty, license_number, department_id, hire_date)
-VALUES ('Dr. Sophie Laurent', 'Neurology', 'LIC-002', 3, DATE '2018-03-15');
-
-INSERT INTO nurses (full_name, department_id, shift_type)
-VALUES ('Laura Hoffmann', 2, 'Night');
-
-INSERT INTO rooms (room_number, room_type, capacity)
-VALUES ('101A', 'ICU', 1);
-
-INSERT INTO admissions (patient_id, room_id, admission_date)
-VALUES (1, 1, SYSDATE);
-
-INSERT INTO appointments (patient_id, doctor_id, appointment_date, status)
-VALUES (2, 2, SYSDATE + 1, 'SCHEDULED');
-
-INSERT INTO medical_records (patient_id, diagnosis, notes)
-VALUES (1, 'Hypertension', 'Patient responding well to treatment');
-
-INSERT INTO prescriptions (patient_id, doctor_id, medication_name, dosage)
-VALUES (1, 1, 'Amlodipine', '5mg once daily');
-
-INSERT INTO inventory_items (item_name, item_category, unit_of_measure, reorder_level)
-VALUES ('Surgical Gloves', 'Consumables', 'Box', 20);
-
-INSERT INTO inventory_items (item_name, item_category, unit_of_measure, reorder_level)
-VALUES ('Paracetamol', 'Medication', 'Tablet', 500);
-
-INSERT INTO inventory_stock (item_id, location, quantity_on_hand, expiration_date)
-VALUES (1, 'Main Storage', 100, DATE '2027-12-31');
-
-INSERT INTO suppliers (supplier_name, contact_info)
-VALUES ('MedSupply Europe', 'contact@medsupply.eu');
+-- NURSES
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Laura Hoffmann', (SELECT department_id FROM departments WHERE department_name='Emergency'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Isabelle Martin', (SELECT department_id FROM departments WHERE department_name='Cardiology'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Sven Petersen', (SELECT department_id FROM departments WHERE department_name='Neurology'), 'Rotating');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Marie Schmit', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Luc Bernard', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Laura Hoffmann', (SELECT department_id FROM departments WHERE department_name='Emergency'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Isabelle Martin', (SELECT department_id FROM departments WHERE department_name='Cardiology'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Sven Petersen', (SELECT department_id FROM departments WHERE department_name='Neurology'), 'Rotating');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Marie Schmit', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Luc Bernard', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Laura Hoffmann', (SELECT department_id FROM departments WHERE department_name='Emergency'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Isabelle Martin', (SELECT department_id FROM departments WHERE department_name='Cardiology'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Sven Petersen', (SELECT department_id FROM departments WHERE department_name='Neurology'), 'Rotating');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Marie Schmit', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Luc Bernard', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Laura Hoffmann', (SELECT department_id FROM departments WHERE department_name='Emergency'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Isabelle Martin', (SELECT department_id FROM departments WHERE department_name='Cardiology'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Sven Petersen', (SELECT department_id FROM departments WHERE department_name='Neurology'), 'Rotating');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Marie Schmit', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Luc Bernard', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Laura Hoffmann', (SELECT department_id FROM departments WHERE department_name='Emergency'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Isabelle Martin', (SELECT department_id FROM departments WHERE department_name='Cardiology'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Sven Petersen', (SELECT department_id FROM departments WHERE department_name='Neurology'), 'Rotating');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Marie Schmit', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Luc Bernard', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Laura Hoffmann', (SELECT department_id FROM departments WHERE department_name='Emergency'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Isabelle Martin', (SELECT department_id FROM departments WHERE department_name='Cardiology'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Sven Petersen', (SELECT department_id FROM departments WHERE department_name='Neurology'), 'Rotating');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Marie Schmit', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Luc Bernard', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Laura Hoffmann', (SELECT department_id FROM departments WHERE department_name='Emergency'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Isabelle Martin', (SELECT department_id FROM departments WHERE department_name='Cardiology'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Sven Petersen', (SELECT department_id FROM departments WHERE department_name='Neurology'), 'Rotating');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Marie Schmit', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Luc Bernard', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Laura Hoffmann', (SELECT department_id FROM departments WHERE department_name='Emergency'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Isabelle Martin', (SELECT department_id FROM departments WHERE department_name='Cardiology'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Sven Petersen', (SELECT department_id FROM departments WHERE department_name='Neurology'), 'Rotating');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Marie Schmit', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Luc Bernard', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Laura Hoffmann', (SELECT department_id FROM departments WHERE department_name='Emergency'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Isabelle Martin', (SELECT department_id FROM departments WHERE department_name='Cardiology'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Sven Petersen', (SELECT department_id FROM departments WHERE department_name='Neurology'), 'Rotating');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Marie Schmit', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Luc Bernard', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Laura Hoffmann', (SELECT department_id FROM departments WHERE department_name='Emergency'), 'Night');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Isabelle Martin', (SELECT department_id FROM departments WHERE department_name='Cardiology'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Sven Petersen', (SELECT department_id FROM departments WHERE department_name='Neurology'), 'Rotating');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Marie Schmit', (SELECT department_id FROM departments WHERE department_name='Pediatrics'), 'Day');
+INSERT INTO nurses (full_name, department_id, shift_type) VALUES ('Luc Bernard', (SELECT department_id FROM departments WHERE department_name='Orthopedics'), 'Night');
