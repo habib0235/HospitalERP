@@ -57,3 +57,4 @@ public class Patient {
     @OneToMany(mappedBy = "patient", fetch = FetchType.LAZY)
     private List<Prescription> prescriptions;
 }
+
