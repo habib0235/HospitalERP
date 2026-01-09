@@ -36,13 +36,11 @@
             </exclusions>
         </dependency>
 
-        <!-- Oracle JDBC Driver -->
         <dependency>
             <groupId>com.oracle.database.jdbc</groupId>
             <artifactId>ojdbc11</artifactId>
         </dependency>
 
-        <!-- Jakarta Transactions (REQUIRED for Spring Framework 7 / JPA) -->
         <dependency>
             <groupId>jakarta.transaction</groupId>
             <artifactId>jakarta.transaction-api</artifactId>
