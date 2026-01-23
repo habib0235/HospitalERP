@@ -5,6 +5,49 @@
 -- NO calculations, NO MOD, NO assumptions
 -- ==================================================
 
+-- DEPARTMENTS (must come first - referenced by doctors and nurses)
+INSERT INTO departments (department_name, floor_number) VALUES ('Cardiology', 2);
+INSERT INTO departments (department_name, floor_number) VALUES ('Neurology', 3);
+INSERT INTO departments (department_name, floor_number) VALUES ('Emergency', 1);
+INSERT INTO departments (department_name, floor_number) VALUES ('Pediatrics', 4);
+INSERT INTO departments (department_name, floor_number) VALUES ('Orthopedics', 2);
+
+-- ROOMS (must come before admissions)
+INSERT INTO rooms (room_number, room_type, capacity) VALUES ('101', 'ICU', 1);
+INSERT INTO rooms (room_number, room_type, capacity) VALUES ('102', 'ICU', 1);
+INSERT INTO rooms (room_number, room_type, capacity) VALUES ('201', 'Private', 1);
+INSERT INTO rooms (room_number, room_type, capacity) VALUES ('202', 'Private', 1);
+INSERT INTO rooms (room_number, room_type, capacity) VALUES ('203', 'Private', 1);
+INSERT INTO rooms (room_number, room_type, capacity) VALUES ('204', 'Shared', 2);
+INSERT INTO rooms (room_number, room_type, capacity) VALUES ('205', 'Shared', 2);
+INSERT INTO rooms (room_number, room_type, capacity) VALUES ('301', 'Private', 1);
+INSERT INTO rooms (room_number, room_type, capacity) VALUES ('302', 'Private', 1);
+INSERT INTO rooms (room_number, room_type, capacity) VALUES ('303', 'Shared', 2);
+INSERT INTO rooms (room_number, room_type, capacity) VALUES ('304', 'Shared', 2);
+INSERT INTO rooms (room_number, room_type, capacity) VALUES ('401', 'Pediatric', 1);
+INSERT INTO rooms (room_number, room_type, capacity) VALUES ('402', 'Pediatric', 1);
+INSERT INTO rooms (room_number, room_type, capacity) VALUES ('403', 'Pediatric', 2);
+INSERT INTO rooms (room_number, room_type, capacity) VALUES ('501', 'Emergency', 4);
+
+-- SUPPLIERS (independent table, no dependencies)
+INSERT INTO suppliers (supplier_name, contact_info) VALUES ('MedSupply Corp', 'contact@medsupply.com, +352-123-4567');
+INSERT INTO suppliers (supplier_name, contact_info) VALUES ('HealthTech Solutions', 'info@healthtech.lu, +352-234-5678');
+INSERT INTO suppliers (supplier_name, contact_info) VALUES ('PharmaCare International', 'sales@pharmacare.com, +352-345-6789');
+
+-- INVENTORY ITEMS (must come before inventory_stock)
+INSERT INTO inventory_items (item_name, item_category, unit_of_measure, reorder_level) VALUES ('Paracetamol 500mg', 'Medication', 'Box', 50);
+INSERT INTO inventory_items (item_name, item_category, unit_of_measure, reorder_level) VALUES ('Surgical Gloves', 'Medical Supplies', 'Box', 100);
+INSERT INTO inventory_items (item_name, item_category, unit_of_measure, reorder_level) VALUES ('Bandages', 'Medical Supplies', 'Roll', 75);
+INSERT INTO inventory_items (item_name, item_category, unit_of_measure, reorder_level) VALUES ('Syringes 5ml', 'Medical Supplies', 'Pack', 80);
+INSERT INTO inventory_items (item_name, item_category, unit_of_measure, reorder_level) VALUES ('Antibiotics - Amoxicillin', 'Medication', 'Box', 40);
+
+-- INVENTORY STOCK
+INSERT INTO inventory_stock (item_id, location, quantity_on_hand, expiration_date) VALUES (1, 'Pharmacy A', 120, DATE '2027-12-31');
+INSERT INTO inventory_stock (item_id, location, quantity_on_hand, expiration_date) VALUES (2, 'Storage Room 1', 250, DATE '2026-06-30');
+INSERT INTO inventory_stock (item_id, location, quantity_on_hand, expiration_date) VALUES (3, 'Storage Room 1', 180, DATE '2028-03-15');
+INSERT INTO inventory_stock (item_id, location, quantity_on_hand, expiration_date) VALUES (4, 'Storage Room 2', 300, DATE '2026-09-20');
+INSERT INTO inventory_stock (item_id, location, quantity_on_hand, expiration_date) VALUES (5, 'Pharmacy B', 95, DATE '2027-05-10');
+
 -- PATIENTS
 INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20000', 'John Muller', DATE '1980-01-15', 'M', '621100000', 'john.muller@mail.com');
 INSERT INTO patients (national_id, full_name, date_of_birth, gender, phone_number, email) VALUES ('LU20001', 'Anna Weber', DATE '1982-02-18', 'F', '621100001', 'anna.weber@mail.com');

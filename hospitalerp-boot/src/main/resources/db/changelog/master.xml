@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+           http://www.liquibase.org/xml/ns/dbchangelog
+           http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <!-- DDL First -->
+    <changeSet id="001-init-ddl" author="system">
+        <sqlFile path="classpath:sql/001-hospital-ddl.sql"
+                 encoding="utf8"
+                 splitStatements="true"
+                 endDelimiter=";"
+                 stripComments="false"/>
+    </changeSet>
+
+    <!-- Data Second -->
+    <changeSet id="002-init-data" author="system">
+        <sqlFile path="classpath:sql/002-hospital-data.sql"
+                 encoding="utf8"
+                 splitStatements="true"
+                 endDelimiter=";"
+                 stripComments="false"/>
+    </changeSet>
+
+</databaseChangeLog>
